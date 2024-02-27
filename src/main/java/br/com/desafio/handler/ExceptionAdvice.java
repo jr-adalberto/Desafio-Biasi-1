@@ -21,7 +21,6 @@ public class ExceptionAdvice {
         return new ResponseEntity<>(obtemErro(ex), HttpStatus.BAD_REQUEST);
     }
 
-
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<?> handleFieldValidationException(MethodArgumentNotValidException ex) {
         BindingResult bindingResult = ex.getBindingResult();
